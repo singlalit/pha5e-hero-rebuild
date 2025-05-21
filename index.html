@@ -31,7 +31,8 @@
             </h1>
           </div>
         </div>
-      
+  
+
         <!-- Floating Images -->
         <img src="images/img1.jpeg" class="floating-img position-absolute img1" alt="img1">
         <img src="images/img2.jpeg" class="floating-img position-absolute img2" alt="img2">
@@ -42,7 +43,127 @@
     <!-- We'll add content here in next steps -->
   </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="script.js"></script>
+
+      <!-- Promo Video Section -->
+<section class="promo-video-section py-5 bg-black text-white">
+  <div class="container text-center">
+    <h2 class="mb-4">Watch the Course Overview</h2>
+
+    <div class="video-wrapper position-relative d-inline-block">
+      <video id="promoVideo" width="100%" poster="images/video-thumbnail.jpeg">
+        <source src="videos/Untitled design.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <button id="videoToggleBtn" class="btn btn-light position-absolute top-50 start-50 translate-middle px-4 py-2 rounded">
+        ▶ Play
+      </button>
+    </div>
+  </div>
+</section>
+<!-- Course Section -->
+<section class="course-section py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="text-center mb-5">Explore the Free AI Courses</h2>
+
+    <div class="row g-4">
+      <!-- Course Card 1 -->
+      <div class="col-md-4">
+        <div class="course-card position-relative overflow-hidden">
+          <img src="images/course1.jpeg" alt="Course 1" class="img-fluid course-img"
+           onclick="openVideo('https://www.youtube.com/embed/9Wj7QWR2VT4?autoplay=1')">
+          <div class="course-details p-3">
+            <h4>Master Prompt Engineering</h4>
+            <p>Unlock the full potential of AI tools like ChatGPT, Claude, Gemini, and more with my in-depth ebook that takes you from beginner to expert in Prompt Engineering. Perfect for content creators, marketers, freelancers, developers, and anyone who wants to master AI communication.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Card 2 -->
+      <div class="col-md-4">
+        <div class="course-card position-relative overflow-hidden">
+          <img src="images/course2.webp" alt="Course 2" class="img-fluid course-img" onclick="openVideo('https://www.youtube.com/embed/Rx-ofaEcm9c?autoplay=1')">
+          <div class="course-details p-3">
+            <h4>AI for Entrepreneurs: How to Start, Grow & Automate Your Business Using AI </h4>
+            <p>
+              Unlock the power of AI in your business!
+              In this video, you’ll learn how to use artificial intelligence tools like ChatGPT, Midjourney, ElevenLabs, and more to start, grow, and automate your entrepreneurial journey in 2025. Whether you're launching a startup, building a brand, or scaling your business, AI is the most powerful partner you can have..</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Card 3 -->
+      <div class="col-md-4">
+        <div class="course-card position-relative overflow-hidden">
+          <img src="images/course3.webp" alt="Course 3" class="img-fluid course-img" onclick="openVideo('https://www.youtube.com/embed/JSrZcdqml7A?autoplay=1')">
+          <div class="course-details p-3">
+            <h4>Is ChatGPT 4.5 Worth It? Honest Review + Full Feature Tour</h4>
+            <pUnlock the Full Power of ChatGPT 4.5 (GPT-4 Turbo) in 2025!
+            Welcome to Engineering IO! In this deep-dive video, we explore everything you need to know about the latest and most powerful version of ChatGPT — GPT-4.5, also known as GPT-4 Turbo. This 30-minute guide is packed with real facts, practical insights, comparisons with GPT-4, and honest commentary on its features, tools, and future.>Master prompt crafting techniques with real examples and templates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+YouTube Popup
+<div id="videoPopup" class="video-popup d-none">
+  <div class="video-popup-content">
+    <span class="close-popup" onclick="closeVideo()">×</span>
+    <iframe id="youtubeFrame" width="100%" height="400" frameborder="0" allowfullscreen  allow="autoplay"></iframe>
+  </div>
+</div>
+<!-- About Section -->
+<section class="about-section py-5 bg-black text-white">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Text Content -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <h2>About Engineering IO</h2>
+        <p class="lead mt-3">
+          Welcome to <strong>Engineering IO</strong> — a YouTube channel dedicated to empowering engineering students, tech enthusiasts, and entrepreneurs through the power of AI.
+        </p>
+        <p>
+          Our mission is to simplify AI concepts, tools, and techniques so that anyone can leverage them for innovation, productivity, and career growth.
+        </p>
+        <p>
+          This <strong>Free AI Course</strong> is a step toward that vision. Whether you're a beginner or just exploring how AI fits into your field, you're in the right place.
+        </p>
+        <p class="mb-0">
+          Follow along, learn something new, and let’s build the future — one AI-powered idea at a time.
+        </p>
+      </div>
+
+      <!-- Channel Image (Optional)
+      <div class="col-lg-5 text-center">
+        <img src="images/logo.jpg" alt="Engineering IO" class="img-fluid rounded shadow">
+      </div> -->
+    </div>
+  </div>
+</section>
+<!-- Contact Section -->
+<section class="contact-section py-5 bg-dark text-white text-center">
+  <div class="container">
+    <h2 class="mb-4">Get in Touch</h2>
+    <p class="mb-5">Have questions or want to connect? Reach out anytime or explore more content on my YouTube channel!</p>
+
+    <div class="d-flex flex-column flex-md-row justify-content-center gap-4">
+      <!-- Email Button -->
+      <a href="lalitsingh242004@gmail.com" class="btn btn-lg btn-outline-light px-5 py-3 contact-btn">
+        📩 Mail Me
+      </a>
+
+      <!-- YouTube Button -->
+      <a href="http://www.youtube.com/@engineering_io" target="_blank" class="btn btn-lg btn-outline-danger px-5 py-3 contact-btn">
+        ▶ Visit YouTube Channel
+      </a>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

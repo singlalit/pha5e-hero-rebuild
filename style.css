@@ -71,4 +71,112 @@ body {
                  0 0 20px rgba(255, 255, 255, 0.3);
     transform: scale(1.02);
   }
+  .promo-video-section video {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+  
+  #videoToggleBtn {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+  }
+  
+  #videoToggleBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .course-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+  }
+  
+  .course-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .course-details {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+  
+  /* YouTube Popup */
+  .video-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .video-popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  .close-popup {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  .about-section {
+    background: #0d0d0d;
+    line-height: 1.8;
+  }
+  
+  .about-section h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #00ffcc;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+  }
+  
+  .about-section img {
+    max-height: 300px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  .contact-section h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #00ffcc;
+  }
+  
+  .contact-section p {
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  .contact-btn {
+    font-size: 1.2rem;
+    border-width: 2px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  }
   

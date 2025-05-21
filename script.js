@@ -43,3 +43,52 @@ window.addEventListener("load", () => {
     bgVideo.style.opacity = 1;
   }, 500); // delay to sync with other animations
 });
+// Toggle Play/Pause for Promo Video
+const promoVideo = document.getElementById('promoVideo');
+const toggleBtn = document.getElementById('videoToggleBtn');
+
+toggleBtn.addEventListener('click', () => {
+  if (promoVideo.paused) {
+    promoVideo.play();
+    toggleBtn.textContent = '⏸ Pause';
+  } else {
+    promoVideo.pause();
+    toggleBtn.textContent = '▶ Play';
+  }
+});
+// Open YouTube Popup
+function openVideo(url) {
+  const popup = document.getElementById("videoPopup");
+  const frame = document.getElementById("youtubeFrame");
+  frame.src = url;
+  popup.classList.remove("d-none");
+}
+
+// Close YouTube Popup
+function closeVideo() {
+  const popup = document.getElementById("videoPopup");
+  const frame = document.getElementById("youtubeFrame");
+  frame.src = "";
+  popup.classList.add("d-none");
+}
+gsap.from(".about-section h2", {
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  scrollTrigger: ".about-section"
+});
+
+gsap.from(".about-section p", {
+  opacity: 0,
+  y: 30,
+  duration: 0.8,
+  stagger: 0.2,
+  scrollTrigger: ".about-section"
+});
+gsap.from(".contact-btn", {
+  opacity: 0,
+  y: 40,
+  duration: 1,
+  stagger: 0.3,
+  scrollTrigger: ".contact-section"
+});
